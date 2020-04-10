@@ -5,8 +5,8 @@ if all(x>0 for x in l):
 elif all(x<=0 for x in l):
     print(max(l))
 else:
-    for i in l:
-        mtn=mtn+i
+    for I in l:
+        mtn=mtn+I
         
         if mtn<0:
             mtn=0

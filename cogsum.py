@@ -1,17 +1,4 @@
-l=list(map(int,input().split()))
-mtn,m=0,0
-if all(x>0 for x in l):
-    print(sum(l))
-elif all(x<=0 for x in l):
-    print(max(l))
-else:
-    for I in l:
-        mtn=mtn+I
-        
-        if mtn<0:
-            mtn=0
-        
-        else:
-            m=mtn    
-    print(m)    
-            
+arr=[0,2,3,0,1]
+f=[x for x in arr if x!=0]
+
+print(f)

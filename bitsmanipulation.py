@@ -8,10 +8,12 @@ def setbit(number,index):
     mask = 1 << index
     return number | mask
 
-def clearbit(number,index):
+def clearortogglebit(number,index):
     mask = 1 << index
     return number ^ mask
 
+def poweroftwo(number):
+    return number & (number - 1) == 0
 
 print(testbit(21,3))
 print(clearortogglebit(21,2))

@@ -1,31 +1,21 @@
-tc=int(input())
-for i in range(tc):
-    a=int(input())
-    b=list(map(int,input().split()))
-    water=0
-    
-    
-    for j in range(0,a-1):
-        if b[j]>b[j+1]:
-           
-            for k in range(j+1,a):
-                
-                
-                count=0
-                ind=0
-                if b[k]>=b[j]:
-                    ind=k
-                    count+=1
-                if count==1:
-                    
-                    for l in range(j+1,k):
-                        water+=b[j]-b[l]
-                        
-                        print(water)
-        j+=ind      
-    
-                    
-                
-    
-            
-            
+a = 0
+b = 0
+c = 0
+floor2 = 0
+number = 0
+floor1 = int(input("floor number"))
+a = floor1
+print("Lift a arrived")
+while number == 0:
+    floor2 = int(input('floor number'))
+
+    if (abs(a-floor2)) <= abs(b-floor2) and abs(a-floor2) <= abs(c-floor2):
+        a = floor2
+        print('lift a arrived')
+    else:
+        if (abs(b-floor2)) <= abs(a-floor2) and abs(b-floor2) <= abs(c-floor2):
+            b = floor2
+            print('lift b arrived')
+        else:
+            c = floor2
+            print('lift c arrived')

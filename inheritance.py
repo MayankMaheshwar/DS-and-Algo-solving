@@ -3,15 +3,15 @@ class animal:
                 self.name= dogname
 
         def define(self):
-                print("my name is dog") 
+                print("I am a type of animal") 
 
         def eat(self,food):
                 print("i eat"+ food)
 
 class dog(animal):
         def eat(self,food):
-                print("i eat"  + food)
+                print("i eat "  + food)
 
 d=dog("mike")
 d.define()
-animal.eat
+d.eat("dog's things")

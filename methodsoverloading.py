@@ -1,8 +1,6 @@
-def T(a,b,c):
-    return a*b*c
-    
-def T(a,b):
-    return a*b
+def add(a,b,c=0):
+    return a+b+c
 
 
-print(T(1,2,3))        
+print(add(1,2))  
+print(add(1,2,3))      

@@ -1,13 +1,36 @@
-# You have a function rand7() that generates a random integer from 1 to 7. Use it to write a function rand5() that generates a random integer from 1 to 5.
-import random
-def rand7():
-    return random.randrange(0,7)
-def rand5():
-    result=7
-    while result>5:
-        result=rand7()
-    return result
-if __name__=="__main__":
-
-    print(random.random())
-    print(rand7())        
+public class LinkedList {
+	
+	int n;
+	LinkedList next; 
+	
+	public LinkedList()
+	{
+		n=0;
+		next=null;
+		
+	}
+	
+	public void add(int n)
+	{
+		this.n=n;
+	}
+	............
+	
+	public static void main(String []aa)
+	{
+		LinkedList first=null,temp=null;  /**Line A**/
+		Scanner sc=new Scanner(System.in);
+		for(int i=0;i<5;i++)
+		{
+			LinkedList li=new LinkedList();
+			int n=sc.nextInt();
+			if(first==null)
+			{
+			li.add(n);  /**Line B**/
+			temp=li;
+			first=temp;
+			}
+			else{
+				temp.next=li;
+				temp=li;   /**Line C**/
+}

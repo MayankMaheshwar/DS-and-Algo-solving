@@ -15,6 +15,5 @@ def clearortogglebit(number,index):
 def poweroftwo(number):
     return number & (number - 1) == 0
 
-print(testbit(21,3))
-print(clearortogglebit(21,2))
-
+mask = 1<<4
+print(mask)

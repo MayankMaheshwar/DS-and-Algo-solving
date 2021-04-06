@@ -3,7 +3,7 @@ def m(t):
 
 @m
 def t():
-    print("mayank")
+    return m("dgs")
 
 
-t()
+print(t())

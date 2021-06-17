@@ -1,7 +1,14 @@
-def change_number(num, a):
-    num += 10
-    a = 5
-    return num+a
+import re
 
 
-print(change_number(3))
+def decrypt(str):
+    alphanumeric = [character for character in str if character.isalnum()]
+    alphanumeric = "".join(alphanumeric)
+
+    result = ''.join(w for w in alphanumeric if w.isupper())
+
+    return result
+
+x
+s = "KDeoALOklOOHserfL&&oAJSIskdsf"
+print(decrypt(s))

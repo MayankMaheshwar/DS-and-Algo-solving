@@ -1,14 +1,15 @@
-import re
+t = int(input())
+for i in range(t):
+    n = int(input())
+    k = int(input())
+    s = input()
+    if k == 1:
+        print(1)
+    else:
+        for j in range(n-k):
+            s[j:k].replace("1", "0")
 
-
-def decrypt(str):
-    alphanumeric = [character for character in str if character.isalnum()]
-    alphanumeric = "".join(alphanumeric)
-
-    result = ''.join(w for w in alphanumeric if w.isupper())
-
-    return result
-
-x
-s = "KDeoALOklOOHserfL&&oAJSIskdsf"
-print(decrypt(s))
+        if all(x == "0" for x in s):
+            print(1)
+        else:
+            print(0)

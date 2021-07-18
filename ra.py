@@ -1,5 +1,5 @@
 t = int(input())
-for i in range(t):
+for _ in range(t):
     n = int(input())
     k = int(input())
     s = input()

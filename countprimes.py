@@ -1,4 +1,3 @@
-
 class Solution:
     def countPrimes(self, n: int) -> int:
         check = [True for _ in range(n)]

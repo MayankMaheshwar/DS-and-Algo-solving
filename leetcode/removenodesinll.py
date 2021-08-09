@@ -13,6 +13,7 @@ class Solution:
             if cur.val == val:
                 if cur == head:
                     prev = head = head.next
+                    cur = head
                 else:
                     prev.next = cur.next
                     cur = cur.next

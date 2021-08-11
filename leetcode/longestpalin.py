@@ -5,3 +5,4 @@ def longestPalindrome(self, s):
         if ans % 2 == 0 and v % 2 == 1:
             ans += 1
     return ans
+"longest palindrome"

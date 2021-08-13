@@ -7,7 +7,7 @@ class Solution:
 
         @lru_cache(None)
         def dp(i, j):
-            # The value of the game [piles[i], piles[i+1], ..., piles[j]]
+            # The value of the game [piles[i], piles[i+1], .., piles[j]]
             if i > j:
                 return 0
             parity = (j - i - N) % 2

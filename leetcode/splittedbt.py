@@ -1,7 +1,8 @@
- def maxProduct(self, root):
-      self.res = total = 0
+class Solution:
+    def maxProduct(self, root):
+        self.res = total = 0
 
-       def s(root):
+        def s(root):
             if not root:
                 return 0
             left, right = s(root.left), s(root.right)

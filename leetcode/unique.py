@@ -1,3 +1,4 @@
+# sliding window
 class Solution:
     def countGoodSubstrings(self, s: str) -> int:
         if len(s) < 3:

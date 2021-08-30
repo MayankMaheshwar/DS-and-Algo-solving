@@ -2,7 +2,7 @@ class Solution:
     def isValidSerialization(self, preorder: str) -> bool:
         p = preorder.split(',')
 
-        # initially we have one empty slot to put the root in it
+        # initially we have one empty slot putting the root in it
         slot = 1
         for node in p:
 

@@ -1,3 +1,6 @@
+"1089. Duplicate Zeros"
+
+
 class Solution:
     def duplicateZeros(self, arr: List[int]) -> None:
         zeroes = arr.count(0)

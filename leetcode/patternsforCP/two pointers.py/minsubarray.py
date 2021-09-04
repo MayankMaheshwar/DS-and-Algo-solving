@@ -16,5 +16,6 @@ class Solution:
                     j += 1
                 if i-j+1 < ml:
                     ml = i-j+1
+                    # found minimum
 
         return ml if ml != 2**32 else 0

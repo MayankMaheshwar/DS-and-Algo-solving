@@ -10,5 +10,5 @@ class Solution:
                 arr[i + zeroes] = arr[i]
             if arr[i] == 0:
                 zeroes -= 1
-                if i + zeroes < n:
+                if i + zeroes < n:su
                     arr[i + zeroes] = 0

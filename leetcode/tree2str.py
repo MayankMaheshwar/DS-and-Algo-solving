@@ -31,7 +31,7 @@ class Solution:
 """ Second dfs """
 
 
-class Solution(object):
+class Solutin(object):
     def tree2str(self, t):
         """
         :type t: TreeNode

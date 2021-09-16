@@ -19,7 +19,7 @@ for edge in list:
 mx = 0
 for node in unique:
 
-    queue = deque()
+    queue = deque()  
     visited = set()
     queue.append(node)
     while queue:

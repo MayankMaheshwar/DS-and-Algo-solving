@@ -1,15 +1,3 @@
-import sys
-
-if len(sys.argv) != 2:
-    raise ValueError('Please provide email-id to send the email.')
-
-print(f'Script Name is {sys.argv[0]}')
-
-email = sys.argv[1]
-
-print(f'Sending test email to {email}')
-
-
 def addingBuffer(timeList):
     # 09:00 - 09:15, 13:15 - 13:45 and 18:45 - 19:00
     firstBuffer = 36  # 9*4
@@ -30,8 +18,3 @@ class Room:
         self.name = name
         self.personCapacity = personCapacity
         self.timeList = addingBuffer(timeList)
-
-
-cCave = Room("C-Cave", 3)
-dTower = Room("D-Tower", 7)
-gMansion = Room("G-Mansion", 20)

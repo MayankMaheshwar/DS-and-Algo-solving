@@ -1,20 +1,66 @@
-def addingBuffer(timeList):
-    # 09:00 - 09:15, 13:15 - 13:45 and 18:45 - 19:00
-    firstBuffer = 36  # 9*4
-    timeList[firstBuffer] = False
-    secondBufferFirstHalf = 53  # 13*4+1
-    timeList[secondBufferFirstHalf] = False
-    secondBufferSecondHalf = 54  # 13*4+2
-    timeList[secondBufferSecondHalf] = False
-    thirdBuffer = 18*4+3  # 18*4+3
-    timeList[thirdBuffer] = False
-    return timeList
+from classRoom import Room
+from rules import checkOverlapDays, isTimeFormat, checkCapacity, checkBuffer, checkIntervalOfFifteen, bookRoom
+import sys
 
 
-class Room:
+if len(sys.argv) != 2:
+    raise ValueError('Please provide input file to test the code.')
 
-    # timeList = 15 mins intervals in 24 hrs => 1 hr = 4's - 15 min intervals equalsto 4*24hrs = 96
-    def __init__(self, name, personCapacity, timeList=[True] * 96):
-        self.name = name
-        self.personCapacity = personCapacity
-        self.timeList = addingBuffer(timeList)
+
+path = "/home/enemy/Desktop/Projects/pythonDSA/leetcode/geektrust.py/"
+fileName = path + sys.argv[1]
+
+# Creating our rooms object
+cCave = Room("C-Cave", 3)
+dTower = Room("D-Tower", 7)
+gMansion = Room("G-Mansion", 20)
+
+# check time format
+
+
+# reads file line by line
+with open(fileName) as file:
+    for line in file:
+        inputs = list(line.split())
+        query_type = inputs[0]
+        start_time = inputs[1]
+        end_time = inputs[2]
+
+        if isTimeFormat(start_time) == False or isTimeFormat(end_time) == False or checkOverlapDays(start_time, end_time) == False or checkIntervalOfFifteen(start_time, end_time) == False:
+            print("INCORRECT_INPUT")
+
+        elif query_type == "VACANCY":
+            ans = ""
+            if checkBuffer(cCave.timeList, start_time, end_time) == True:
+                ans += cCave.name
+            if checkBuffer(dTower.timeList, start_time, end_time) == True:
+                ans += dTower.name
+            if checkBuffer(gMansion, start_time, end_time) == True:
+                ans += gMansion.name
+
+            if ans == "":
+                print("NO_VACANT_ROOM")
+            else:
+                print(ans)
+
+        else:
+            print("book")
+            number_of_people = int(inputs[3])
+            if not checkCapacity(number_of_people):
+                print("NO_VACANT_ROOM")
+                break
+            if number_of_people <= cCave.personCapacity and checkBuffer(cCave.timeList, start_time, end_time) == True:
+                bookRoom(cCave.timeList, start_time, end_time)
+                cCave.personCapacity -= number_of_people
+            elif number_of_people <= cCave.personCapacity and checkBuffer(cCave.timeList, start_time, end_time) == False:
+                cCave.personCapacity -= number_of_people
+            elif number_of_people <= dTower.personCapacity and checkBuffer(dTower.timeList, start_time, end_time) == True:
+                bookRoom(dTower.timeList, start_time, end_time)
+                dTower.personCapacity -= number_of_people
+            elif number_of_people <= dTower.personCapacity and checkBuffer(dTower.timeList, start_time, end_time) == False:
+                dTower.personCapacity -= number_of_people
+            elif number_of_people <= gMansion.personCapacity and checkBuffer(gMansion.timeList, start_time, end_time) == True:
+                bookRoom(gMansion.timeList, start_time, end_time)
+                gMansion.personCapacity -= number_of_people
+            elif number_of_people <= dTower.personCapacity and checkBuffer(gMansion.timeList, start_time, end_time) == False:
+                gMansion.personCapacity -= number_of_people

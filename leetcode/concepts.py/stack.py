@@ -3,6 +3,8 @@
 Return true if there is a 132 pattern in nums, otherwise, return false.
 """
 
+from sys import maxint
+
 
 class Solution(object):
     def find132pattern(self, nums):

@@ -1,19 +1,20 @@
 class Trie:
     head = {}
-    def add(self,word):
+
+    def add(self, word):
         cur = self.head
         for ch in word:
             if ch not in cur:
-                cur[ch]={}
-            cur=cur[ch]
-        cur['*']=True
+                cur[ch] = {}
+            cur = cur[ch]
+        cur['*'] = True
 
-    def search(self,word):
-        cur=self.head
+    def search(self, word):
+        cur = self.head
         for ch in word:
             if ch not in cur:
-                return False  
-            cur=cur[ch]
+                return False
+            cur = cur[ch]
         if '*' in cur:
             return True
         else:
@@ -21,7 +22,9 @@ class Trie:
 
     def show(self):
         print(self.head)
-dic= Trie()
+
+
+dic = Trie()
 dic.add('hi')
 dic.add('hiii')
 dic.add('hello')
@@ -30,3 +33,5 @@ dic.add('bil')
 print(dic.search('hi'))
 print(dic.search('hello'))
 print(dic.search('hiii'))
+
+print(dic)

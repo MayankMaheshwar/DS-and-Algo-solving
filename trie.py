@@ -24,6 +24,8 @@ class Trie:
         print(self.head)
 
 
+print(type('a') == str)
+
 dic = Trie()
 dic.add('hi')
 dic.add('hiii')

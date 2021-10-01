@@ -12,4 +12,4 @@ for num in arr:
         b = num
     elif num > a and num < b:
         a = num
-print(a, b, c)
+print(c)

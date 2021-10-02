@@ -16,11 +16,33 @@ s = "agfsgadf"
 print(list(reversed(s)))"""
 
 
-A = [15, 5, 1, 10, 2]
-mi = 2**32
-for i, num in enumerate(A):
-    if i == len(A)-1:
-        break
-    if A[i+1] ^ num < mi:
-        mi = A[i+1] ^ num
-print(5 ^ (-5))
+def solve(A, B, C):
+
+    dic = {}
+    res = []
+    for num in A:
+        if num not in dic:
+            dic[num] = 1
+
+    for num in B:
+        if num in dic and dic[num] == 1:
+            dic[num] += 1
+
+        else:
+            dic[num] = 1
+
+    for num in C:
+        if num in dic and dic[num] >= 1:
+            dic[num] += 1
+    for k, v in dic.items():
+        if v >= 2:
+            res.append(k)
+    print(dic)
+    res.sort()
+    print(res)
+
+
+A = [56, 56, 34, 34, 72, 71]
+B = [56, 56, 34, 34, 72, 71]
+C = [56, 56, 34, 34, 72, 71]
+solve(A, B, C)

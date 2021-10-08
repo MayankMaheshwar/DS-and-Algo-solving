@@ -1,60 +1,61 @@
 class Node:
-    def __init__(self,data):
-        self.data=data
-        self.left=None
-        self.right=None
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
+
+
 class bst:
     def __init__(self):
-        self.root=None
+        self.root = None
 
-    def ir(self,data,node):
-        if data<node.data:
-                
-            if node.left==None:
-                node.left=Node(data)
+    def ir(self, data, node):
+        if data < node.data:
+
+            if node.left == None:
+                node.left = Node(data)
             else:
-                self.ir(data,node.left)
+                self.ir(data, node.left)
 
         else:
-            if node.right==None:
-                node.right=Node(data)
+            if node.right == None:
+                node.right = Node(data)
             else:
-                self.ir(data,node.right)  
+                self.ir(data, node.right)
 
-    def i(self,data):
+    def i(self, data):
         if not self.root:
-            self.root=Node(data)
+            self.root = Node(data)
         else:
-            self.ir(data,self.root)
-
-    
+            self.ir(data, self.root)
 
     def gmin(self):
         if self.root:
             return self.getmin(self.root)
 
-    def getmin(self,node):
+    def getmin(self, node):
         if node.left:
             return self.getmin(node.left)
-        return node.data  
+        return node.data
 
     def gmax(self):
         if self.root:
             return self.getmax(self.root)
 
-    def getmax(self,node):
+    def getmax(self, node):
         if node.right:
             return self.getmax(node.right)
         return node.data
 
     def io(self):
-        
+
         if self.root:
             self.io(self.root.left)
             print(self.root.data)
             self.io(self.root.right)
 
-a=bst()
+
+a = bst()
 a.i(10)
 a.i(5)
 a.i(15)

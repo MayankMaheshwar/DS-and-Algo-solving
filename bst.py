@@ -39,10 +39,13 @@ class bst:
         return node.data
 
     def gmax(self):
-        print(self.node)
+        if self.root:
+            return self.getmax(self.root)
 
     def getmax(self, node):
-        print(self.root)
+        if node.right:
+            return self.getmax(node.right)
+        return node.data
 
 
 a = bst()

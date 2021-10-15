@@ -9,3 +9,10 @@ n = len(prices)
         dp_max[i] = max(dp_max[i-1], dp[i])
 
     return dp_max[-3]
+
+
+"""free = 0
+        have = cool = float('-inf')
+        for p in prices:
+            free, have, cool = max(free, cool), max(have, free - p), have + p
+        return max(free, cool)"""

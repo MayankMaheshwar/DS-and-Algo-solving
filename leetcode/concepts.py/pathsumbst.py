@@ -1,3 +1,4 @@
-import collections
-d = collections.defaultdict(int)
-print(d[8])
+from collections import defaultdict
+
+count = defaultdict(int)
+print(count[8])

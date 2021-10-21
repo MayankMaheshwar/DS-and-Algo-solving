@@ -1,4 +1,4 @@
-class RandomizedSet:
+class RandomisedSet:
 
     def __init__(self):
         """

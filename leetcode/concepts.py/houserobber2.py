@@ -1,4 +1,3 @@
-
 def rob(self, nums):
     
     def simple_rob(nums, i, j):

@@ -1,4 +1,4 @@
-def robber(self, nums):
+def robbers(self, nums):
     
     def simple_rob(nums, i, j):
         rob, not_rob = 0, 0

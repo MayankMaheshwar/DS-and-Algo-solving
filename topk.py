@@ -8,4 +8,4 @@ class Solution:
         for i in range(k):
             ans.append(c[i][0])
         return ans
-            
+    print(ans)

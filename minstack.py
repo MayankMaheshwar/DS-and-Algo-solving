@@ -50,7 +50,7 @@ def push(self, x):
     curMin = self.getMin()
     if curMin == None or x < curMin:
         curMin = x
-    self.q.append((x, curMin));
+    self.q.append((x, curMin))
 
 # @return nothing
 def pop(self):

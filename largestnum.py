@@ -12,9 +12,9 @@ class Solution:
             else:
                 return -1
             
-        # Build nums contains all numbers in the String format.
+       
         nums = [str(num) for num in nums]
-        print(nums)
+        
         # Sort nums by cmp_func decreasingly.
         nums.sort(key = cmp_to_key(cmp_func), reverse = True)
         

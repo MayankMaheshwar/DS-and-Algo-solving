@@ -1,12 +1,6 @@
 class Solution(object):
     def spiralMatrixIII(self, R, C, r0, c0):
-        """
-        :type R: int
-        :type C: int
-        :type r0: int
-        :type c0: int
-        :rtype: List[List[int]]
-        """
+        
         i = r0
         j = c0
         coordinates = [[r0, c0]]

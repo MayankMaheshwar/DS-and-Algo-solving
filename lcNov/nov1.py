@@ -1,5 +1,5 @@
 class Solution:
-    def solve(self, board: List[List[str]]) -> None:
+    def solve(self, board) -> None:
         m = len(board)
         n = len(board[0])
         if m <= 2 or n <= 2:

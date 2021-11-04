@@ -24,3 +24,11 @@ def bfs(graph, s):
             if v not in visited:
                 visited.add(v)
                 queue.appendleft(v)
+
+
+
+
+
+graph={0:[1,2],1:[0,2,4],2:[0,1,3],3:[2],4:[1]}
+bfs(graph,0)
+

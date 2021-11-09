@@ -6,42 +6,34 @@ path = "/home/enemy/Desktop/Projects/pythonDSA/leetcode/clootrackcode.py/"
 fileName = path + sys.argv[1]
 
 myfile = open(fileName, "r")
-test_cases = myfile.readline()
+test_cases = int(myfile.readline())
 
 
-
+ans = []
 
 for _ in range(test_cases):
-	entries = myfile.readline()
+	entries = int(myfile.readline())
 	dic={}
-	for _ in range(len(entries)):
+	for _ in range(entries):
 		
 		entry = myfile.readline().split(" ")
 		name = entry[0]
-		tweet_names.append(entry[0])
+		if name not in dic:
+			dic[name]=1
+		else:
+			dic[name]+=1
 		
 
-	test_count += 1
+	dic=sorted(dic.items(),key=lambda x:(x[0],-x[1]))
+	maxtweets=dic[0][1]
+	for key,value in dic:
+		if value!=maxtweets:
+			break
+		ans.append((key,value))
 
-	uniq_names = [pref_names.split()[0] for pref_names in tweet_names]
-	times = Counter(uniq_names)
 
-	repeat = times.values() 
-
-	for element in set(repeat):
-	dupl = ([(key, value) for key, value in sorted(times.items()) if value == element])
-
-	if len(dupl) > 1:
-		for (key, value) in dupl:
-			print (key,'',value)
-
-	max_value = max(times.values())
-	temp_max_result = [(key, value) for key, value in sorted(times.items()) if value == max_value]
-
-	if temp_max_result != dupl:
-		for (key,value) in temp_max_result:
-			print (key,'',value)
-
+for name,num_of_tweets in ans:
+	print(name+" "+str(num_of_tweets))
 
 
 myfile.close()

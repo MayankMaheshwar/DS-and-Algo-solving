@@ -1,3 +1,2 @@
-class Solution:
-    def numTrees(self, n: int) -> int:
-        return factorial(2*n) // (factorial(n)*factorial(n+1))
+def numTrees(self, n: int) -> int:
+    return factorial(2*n) // (factorial(n)*factorial(n+1))

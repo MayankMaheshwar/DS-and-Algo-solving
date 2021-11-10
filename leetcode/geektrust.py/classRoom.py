@@ -18,3 +18,6 @@ class Room:
         self.name = name
         self.personCapacity = personCapacity
         self.timeList = addingBuffer(timeList)
+
+    def __getitem__(self, timeList):
+         return self.timeList

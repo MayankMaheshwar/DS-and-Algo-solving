@@ -39,7 +39,8 @@ def checkBuffer(timeList, start_time, end_time):
     startInterval = (int(start_time[:2])//4+int(start_time[3:])//4)-1
     endInterval = (int(end_time[:2])//4+int(end_time[3:])//4)-1
     for timeInterval in range(startInterval, endInterval+1):
-        if timeList(timeInterval) == False:
+        print(timeList[timeInterval])
+        if timeList[timeInterval] == False:
             return False
     return True
 

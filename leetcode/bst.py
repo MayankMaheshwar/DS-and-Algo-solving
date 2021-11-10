@@ -1,4 +1,4 @@
-# Node Class
+# Node Class to represent parent and child
 class Node:
     # Default Constructor
     def __init__(self, key):

@@ -6,7 +6,7 @@ class Node:
         self.left = None
         self.right = None
 
-    # A utility function to insert a new node with given key in BST
+    # A utility function to insert a new node with given key in BinaryST
     def insert(self, val):
 
         # If the tree is empty, return a new node

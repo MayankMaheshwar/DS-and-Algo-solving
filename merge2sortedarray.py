@@ -1,3 +1,4 @@
+
 def merge(nums1, m, nums2, n):
     if m == 0:
         nums1[:] = nums2[:]

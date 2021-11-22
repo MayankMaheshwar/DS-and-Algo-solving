@@ -7,5 +7,4 @@ def fibo(n):
 
 
 num = int(input())
-
 print(fibo(num))

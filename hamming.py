@@ -1,5 +1,5 @@
 class Solution:
-    def hammingDistance(self, x: int, y: int) -> int:
+    def hammingDistance(self, x, y) -> int:
         res = x ^ y
         ans = 0
         while res != 0:

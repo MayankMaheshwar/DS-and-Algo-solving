@@ -5,5 +5,4 @@ class Solution:
         while res != 0:
             res = res & (res-1)
             ans += 1
-
         return ans

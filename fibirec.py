@@ -1,18 +1,11 @@
 def fibo(n):
-    if n>=3:
+    if n >= 3:
         return fibo(n-2)+fibo(n-1)
-    
+
     else:
-        return 1    
-    
+        return 1
 
 
+num = int(input())
 
-n=int(input())
-
-print(fibo(n))
-
-
-
-
-
+print(fibo(num))

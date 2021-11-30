@@ -44,8 +44,6 @@ class Solution:
         if root.right:
             right = self.lowestCommonAncestor(root.right, p, q)
 
-        # if both children returned a node, means
-        # both p and q found so parent is LCA
         if left and right:
             return root
         else:

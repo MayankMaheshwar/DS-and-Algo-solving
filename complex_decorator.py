@@ -1,4 +1,6 @@
 import functools
+
+
 def dwa(num):
     def d(func):
         @functools.wraps(func)
@@ -14,5 +16,6 @@ def dwa(num):
 @dwa(89)
 def func():
     print('beech')
+
 
 func()

@@ -1,5 +1,5 @@
 s = 'HackerEarth-testing'
-L = "."
+L = "%"
 index = None
 for i in range(len(s)):
     if L == s[i]:

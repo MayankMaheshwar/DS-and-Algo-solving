@@ -1,5 +1,8 @@
+from math import floor, log10
+
+
 class Solution:
-    def findNumbers(self, nums: List[int]) -> int:
+    def findNumbers(self, nums):
         # We are going to take advantage of the fact that the array only contains positive integers.
         # A common formula for finding the number of digits in a positive number is digits = floor(log10(num)) + 1
         # Even if the array contained negatives, you could just do the same with the absolute value of num.
@@ -14,3 +17,6 @@ class Solution:
                 result += 1
 
         return result
+
+
+print(floor(log10(22)) + 1)

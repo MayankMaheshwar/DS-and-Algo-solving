@@ -1,19 +1,12 @@
 from itertools import groupby
 string = 'aaabbbbcccccaaa'
-
-dic = {}
-for chr in string:
-    if chr in dic:
-        dic[chr] += 1
-    else:
-        dic[chr] = 1
-
-
-mx = -2**32
+obj = groupby(string)
+max = -2**32
 malpha = ""
-for k, v in dic.items():
-    if v > mx:
-        mx = v
+
+for k, v in obj:
+    if len(list(v)) > max:
+        max = len(v)
         malpha = k
 
-print(mx, malpha)
+print(malpha)

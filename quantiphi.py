@@ -1,5 +1,5 @@
 from itertools import groupby
-string = 'aaabbbbccccccaaa'
+string = 'aaabbbbcccccaaa'
 
 dic = {}
 for chr in string:
@@ -10,9 +10,9 @@ for chr in string:
 
 
 mx = -2**32
-malpha = []
+malpha = ""
 for k, v in dic.items():
-    if v >= mx:
+    if v > mx:
         mx = v
         malpha = k
 

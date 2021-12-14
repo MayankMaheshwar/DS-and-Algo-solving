@@ -14,6 +14,6 @@ malpha = []
 for k, v in dic.items():
     if v >= mx:
         mx = v
-        malpha.append(k)
+        malpha = k
 
 print(mx, malpha)

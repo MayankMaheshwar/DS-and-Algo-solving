@@ -30,8 +30,6 @@ while b:
 print("Count=", count)
 
 
-# Maintain a class for seperate linked list
-
 class list():
 
     self.head = None

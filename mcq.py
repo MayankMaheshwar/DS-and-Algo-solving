@@ -1,4 +1,4 @@
-s = 'HackerEarth-testing'
+s = 'HackerEarth%testing'
 L = "%"
 index = None
 for i in range(len(s)):

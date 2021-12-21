@@ -1,5 +1,5 @@
 def solution(N):
-    # write your code in Python 3.6
+
     binary = bin(N)[2:]
 
     print(bin(N), binary)

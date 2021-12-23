@@ -1,4 +1,4 @@
-def lemonadeChange(self, bills):
+def lemonadeChange(sel bills):
     five = ten = 0
     for i in bills:
         if i == 5:

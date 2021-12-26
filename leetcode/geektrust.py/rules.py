@@ -35,19 +35,24 @@ def checkOverlapDays(time1, time2):
 
 
 # rule6
-def checkBuffer(timeList, start_time, end_time):
-    startInterval = (int(start_time[:2])//4+int(start_time[3:])//4)-1
-    endInterval = (int(end_time[:2])//4+int(end_time[3:])//4)-1
-    for timeInterval in range(startInterval, endInterval+1):
-        print(timeList[timeInterval])
-        if timeList[timeInterval] == False:
+def checkBuffer(timeList, start_time, end_time, number_of_people):
+    startInterval = (int(start_time[:2])*4+1+int(start_time[3:])//15)
+    endInterval = (int(end_time[:2])*4+1+int(end_time[3:])//15)
+    #print(startInterval, endInterval)
+    for timeInterval in range(startInterval, endInterval):
+
+        if timeList[timeInterval][0] == False or timeList[timeInterval][1] < number_of_people:
             return False
     return True
 
 
 # rule4 && rule5
-def bookRoom(timeList, start_time, end_time):
-    startInterval = (int(start_time[:2])//4+int(start_time[3:]//4))-1
-    endInterval = (int(end_time[:2])//4+int(end_time[3:]//4))-1
-    for timeInterval in range(startInterval, endInterval+1):
-        timeList[timeInterval] = False
+def bookRoom(timeList, start_time, end_time, number_of_people):
+    startInterval = (int(start_time[:2])*4+1+int(start_time[3:])//15)
+    endInterval = (int(end_time[:2])*4+1+int(end_time[3:])//15)
+    #print(startInterval, endInterval)
+    for timeInterval in range(startInterval, endInterval):
+
+        timeList[timeInterval][0] = False
+        timeList[timeInterval][1] = number_of_people - \
+            timeList[timeInterval][1]

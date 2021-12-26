@@ -25,8 +25,6 @@ def addingBuffer(timeList, capacity):
     return timeList
 
 
-False
-
 # Creating our rooms object
 cCave = Room("C-Cave", 3)
 dTower = Room("D-Tower", 7)

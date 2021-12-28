@@ -1,8 +1,7 @@
 from collections import defaultdict
 dic = defaultdict(list)
 
-string = """John is at a post, where they make pots. Making the pots will
-stop in the future. Oh dear, what d on to find more."""
+string = """John is at a postn to find more."""
 
 for str in string:
     st = sorted(str)

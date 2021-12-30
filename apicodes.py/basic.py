@@ -16,7 +16,7 @@ class Solution:
 """ json.dumps() convert python object to a json string """
 second = "".join(chr(x) for x in bytearray(
     html))  # convert byte literal api data to string
-sd = json.loads(second) """convert valid JSON string to python dictionary"""
+sd = json.loads(second)  # convert valid JSON string to python dictionary
 			numberOfFilms = (len(sd["results"][0]['films']))
 
 

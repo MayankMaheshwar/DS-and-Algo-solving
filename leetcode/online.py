@@ -1,4 +1,4 @@
-s = "4a"
+s = "aaabbababc"
 if s == "":
     print("")
 

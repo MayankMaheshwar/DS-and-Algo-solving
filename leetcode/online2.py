@@ -13,7 +13,7 @@ class Trie:
 
 class Node:
     def __init__(self, name, trie):
-        hash = name: {}
+        hash = {name: {}}
 
     def append(self, trie, products):
         level = trie

@@ -19,7 +19,7 @@ class Node:
         level = trie
         i = 0
         while products[i] in level:
-            level = level[products[i]]   A: {B: {}, D: {}}
+            level = level[products[i]]
             i += 1
         level[products[i]]
 

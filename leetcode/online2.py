@@ -5,13 +5,6 @@ A > B > C
 D > B
 E > P > Q
 
-head -> {A, D, E}
-
-
-{} -> {A: {}, }
-
-A: {}
-
 
 class Trie:
     def __init__(self):

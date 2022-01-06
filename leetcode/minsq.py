@@ -19,7 +19,7 @@
 
 """
 
-from math import sqrt
+from math
 
 
 def numSquares(n):

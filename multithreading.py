@@ -2,7 +2,7 @@ import _thread
 import time
 
 
-def cir(A):
+def cir(thread1):
     cd = 10
     while cd > 0:
         print(cd, A)

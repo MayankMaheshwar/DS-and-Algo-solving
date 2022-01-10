@@ -11,7 +11,7 @@ def cir(A):
 
 
 try:
-    _thread.start_new_thread(cir, ("A",))
+    _thread.start_new_thread(cir, ("thread1",))
 except:
     print("NA")
 while 1:

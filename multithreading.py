@@ -2,7 +2,7 @@ import _thread
 import time
 
 
-def cir(thread1):
+def cir(A):
     cd = 10
     while cd > 0:
         print(cd, A)
@@ -11,7 +11,7 @@ def cir(thread1):
 
 
 try:
-    _thread.start_new_thread(cir, ("thread1",))
+    _thread.start_new_thread(cir, ("A",))
 except:
     print("NA")
 while 1:

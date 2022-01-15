@@ -11,7 +11,7 @@ class Solution:
             else:
                 graph[arr[i]] = [i]
 
-        curs = [0]  # store current layers
+        curs = [0]
         visited = {0}
         step = 0
 

@@ -18,7 +18,6 @@ class Solution:
         while curs:
             nex = []
 
-            # iterate the layer
             for node in curs:
                 # check if reached end
                 if node == n-1:

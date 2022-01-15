@@ -19,7 +19,6 @@ class Solution:
             nex = []
 
             for node in curs:
-                # check if reached end
                 if node == n-1:
                     return step
 

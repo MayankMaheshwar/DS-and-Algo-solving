@@ -15,7 +15,6 @@ class Solution:
         visited = {0}
         step = 0
 
-        # when current layer exists
         while curs:
             nex = []
 

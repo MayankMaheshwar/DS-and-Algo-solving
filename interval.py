@@ -5,7 +5,6 @@ class Solution:
 
         while i < len(A) and j < len(B):
 
-            # hi - the endpoint of the intersection
             lo = max(A[i][0], B[j][0])
             hi = min(A[i][1], B[j][1])
             if lo <= hi:

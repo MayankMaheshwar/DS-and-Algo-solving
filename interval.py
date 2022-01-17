@@ -10,7 +10,6 @@ class Solution:
             if lo <= hi:
                 ans.append([lo, hi])
 
-            # Remove the interval with the smallest endpoint
             if A[i][1] < B[j][1]:
                 i += 1
             else:

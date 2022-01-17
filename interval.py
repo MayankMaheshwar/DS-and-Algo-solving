@@ -4,8 +4,7 @@ class Solution:
         i = j = 0
 
         while i < len(A) and j < len(B):
-            # Let's check if A[i] intersects B[j].
-            # lo - the startpoint of the intersection
+
             # hi - the endpoint of the intersection
             lo = max(A[i][0], B[j][0])
             hi = min(A[i][1], B[j][1])

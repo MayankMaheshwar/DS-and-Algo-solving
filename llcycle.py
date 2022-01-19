@@ -12,7 +12,7 @@ class Solution:
             if slow == fast:
                 break
         else:
-            return None  # if not (fast and fast.next): return None
+            return None
         while head != slow:
             head, slow = head.next, slow.next
         return head

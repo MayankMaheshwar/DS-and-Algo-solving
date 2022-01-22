@@ -1,5 +1,4 @@
 from collections import Counter
-textInput = "cat matter cat matter safasf sfafsa"
 arr = textInput.split()
 print(arr)
 
@@ -11,4 +10,4 @@ for k, v in c.items():
     if v > 1:
         ans.append(k)
 
-print(ans)
+return ans

@@ -10,4 +10,4 @@ for k, v in c.items():
     if v > 1:
         ans.append(k)
 
-return ans
+print(ans)

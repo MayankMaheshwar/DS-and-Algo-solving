@@ -1,6 +1,6 @@
 from collections import Counter
 arr = textInput.split()
-print(arr)
+
 
 c = Counter(arr)
 print(c)

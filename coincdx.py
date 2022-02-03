@@ -2,7 +2,7 @@
 return the smallest possible integer after removing k digits from num.
 
 example: Input: num = "143392", k = 3
-Output: "32"
+Output: "132"
 
 """
 

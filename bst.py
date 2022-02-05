@@ -52,7 +52,6 @@ a = bst()
 a.i(10)
 
 a.i(15)
-a.i(6)
 
 
 print(a.gmin())

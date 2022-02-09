@@ -13,4 +13,4 @@ Explanation: n = 2 since there are 2 numbers, so all numbers are in the range [0
 ans = 0
 for i in range(arr):
     ans ^= arr[i]
-print
+print(ans)

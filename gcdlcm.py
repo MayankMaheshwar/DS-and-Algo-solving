@@ -1,13 +1,13 @@
-def gcd(x,y):
+def gcd(x, y):
     while y:
-       
-        x,y=y,x%y
-        print(x,y)
-        
+        x, y = y, x % y
+        print(x, y)
 
     return x
-print(gcd(56,98))    
-lcm=98*56
+
+
+print(gcd(56, 98))
+lcm = 98*56
 print(lcm)
 
 """98 56
@@ -18,5 +18,3 @@ print(lcm)
 
 56 98
 98 56"""
-
-

@@ -10,7 +10,7 @@ Explanation: There are three ways to climb to the top.
 2. 1 step + 2 steps
 3. 2 steps + 1 step
 
-Solution: ?"""
+Solution: """
 
 
 def count(n):

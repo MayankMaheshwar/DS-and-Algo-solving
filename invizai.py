@@ -12,4 +12,3 @@ if flag == False:
         flag = True
 
 print(flag)
-print("yes")

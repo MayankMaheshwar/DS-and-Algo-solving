@@ -16,3 +16,4 @@ while ans != substr:
         dic[str[i]] = i
     j += 1
 print(ans)
+print(dic)

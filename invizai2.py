@@ -15,3 +15,4 @@ while ans != substr:
         ans += str[i]
         dic[str[i]] = i
     j += 1
+print(ans)

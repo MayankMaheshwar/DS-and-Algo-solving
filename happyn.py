@@ -10,7 +10,6 @@ def hn(n):
     else:
         return hn(t)    
 a=int(input())
-print(hn(a))
 
 
 

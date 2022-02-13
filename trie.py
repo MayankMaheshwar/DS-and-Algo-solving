@@ -29,7 +29,7 @@ print(type('a') == str)
 dic = Trie()
 dic.add('hi')
 dic.add('hiii')
-
+dic.add('hello')
 dic.add('bil')
 
 print(dic.search('hi'))

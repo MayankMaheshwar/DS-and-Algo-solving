@@ -35,5 +35,3 @@ dic.add('bil')
 print(dic.search('hi'))
 print(dic.search('hello'))
 print(dic.search('hiii'))
-
-print(dic)

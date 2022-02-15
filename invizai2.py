@@ -1,7 +1,6 @@
 str = 'abcdghabcegfgahgzeg'
 substr = 'ageg'
 
-ans = 'ageg'
 
 dic = {}
 i = 0

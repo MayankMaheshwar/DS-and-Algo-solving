@@ -20,3 +20,6 @@ def unique(a, b, c):
         if num == True:
             ans.append(i)
     return ans
+
+
+print(unique(a, b, c))

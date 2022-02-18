@@ -1,4 +1,4 @@
-class Solution:
+class Solu:
     def characterReplacement(self, s: str, k: int) -> int:
         count = {}
         max_count = start = result = 0

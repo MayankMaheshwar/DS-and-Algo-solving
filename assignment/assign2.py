@@ -1,5 +1,5 @@
 """
-Given stream of numbers, find the median. Simulate streaming of numbers in the code
+Given stream of numbers, find the median of them. Simulate streaming of numbers in the code
 Example: when stream has 3,1,5,4,2 -> median is 3
 If the old stream is added two more elements 3,1,5,4,2,7,6 - median is 4
 If the the stream is added with one more elements - 3,1,5,4,2,7,6,8

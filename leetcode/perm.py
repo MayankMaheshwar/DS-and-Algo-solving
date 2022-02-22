@@ -1,8 +1,13 @@
 from itertools import permutations
-s = "kabccr"
-ans = list(permutations(list(s), 3))
-a = []
-for st in ans:
-    ans.append("".join(st))
+st = "kabccr"
+s = list(set(st))
 
-print(sorted(ans))
+ans = list(permutations(s, 3))
+
+a = []
+for si in ans:
+    a.append("".join(si))
+
+
+b_list = sorted(a, key=str.lower)
+print(b_list)

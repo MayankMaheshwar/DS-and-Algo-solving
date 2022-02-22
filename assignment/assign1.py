@@ -8,35 +8,16 @@ acr,akb,akc,akr,arb,arc,arb,arc,ark,bac,bak,bar,bca,bck,bcr……………..
 """
 
 
-str = "kabccr"
-s = "".join(sorted(str))
+from itertools import permutations
+string = "kabccr"
+str_list = list(set(string))
 
-k = 3
+list_of_perms = list(permutations(str_list, 3))
 
-ans = []
-n = len(s)
-
-
-def size_k_subsequence(s, cur_pos, dic, cur_str):
-
-    if cur_pos == n:
-        return
-
-    if len(cur_str) == k:
-        print(cur_str)
-        return
-
-    if s[cur_pos] not in dic:
-        dic[cur_str] = True
-
-    if s[cur_pos] in dic:
-        cur_pos += 1
-
-    for i in range(cur_pos, n):
-
-        size_k_subsequence(s[i:], cur_pos, dic, cur_str+s[cur_pos])
-
-    size_k_subsequence(s, cur_pos+1, dic, cur_str)
+join_strings = []
+for si in list_of_perms:
+    join_strings.append("".join(si))
 
 
-size_k_subsequence(s, 0, {}, "")
+result = sorted(join_strings, key=str.lower)
+print(result)

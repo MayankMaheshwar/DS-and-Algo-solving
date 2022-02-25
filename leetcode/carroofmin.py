@@ -3,8 +3,7 @@ import sys
 
 
 def min_roof_length(parking_spots, k):
-    # Input validations...
-    # what if k > len(parking_spots)?
+    
     if not parking_spots or k == 0:
         return 0
     if k > len(parking_spots):

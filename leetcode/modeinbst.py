@@ -1,9 +1,4 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+
 class Solution:
     def findMode(self, root: Optional[TreeNode]) -> List[int]:
         count = collections.Counter()
@@ -17,5 +12,3 @@ class Solution:
         dfs(root)
         max_ct = max(count.values())
         return [k for k, v in count.items() if v == max_ct]
-            
-            

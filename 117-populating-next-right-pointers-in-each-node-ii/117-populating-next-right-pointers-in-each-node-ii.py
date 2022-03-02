@@ -15,9 +15,10 @@ class Solution:
         q = deque([root])
         while q:
             prev = None
+            n=len(q)-1
             for _ in range(len(q)):
                 curr = q.popleft()
-                if _ == len(q)-1:
+                if _ == n:
                     curr.next=None
                 if prev==None:
                     prev=curr

@@ -7,7 +7,7 @@ class KthLargest(object):
         heapq.heapify(self.pool)
         while len(self.pool) > k:
             heapq.heappop(self.pool)
-        print(self.pool)
+
 
             
     def add(self, val):

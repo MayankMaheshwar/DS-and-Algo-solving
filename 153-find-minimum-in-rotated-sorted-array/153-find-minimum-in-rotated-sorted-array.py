@@ -3,10 +3,12 @@ class Solution:
         left, right = 0, len(nums) - 1
         while nums[left] > nums[right]:
             middle  = (left + right) // 2
-            if nums[middle] > nums[right]:
-                left = middle + 1
-            else:
-                right = middle
+            print(middle)
+            if nums[middle] >= nums[left]:
                 
+                left=middle+1
+            else:
+                
+                right=middle
         return nums[left]
         

@@ -6,8 +6,8 @@ class Solution:
             
             if nums[index]!=nums[start]: 
                 nums[index], nums[start] = nums[start], nums[index]
-            else: start+=1
+                
+            else:
+                start+=1
           
-        for i in nums:
-            if i==nums[-1]:
-                return i
+        return nums[-1]
